@@ -16,6 +16,7 @@ class CherryPicker
   end
 
   def done
+    raise StandardError, 'Required to call #start prior to #done' if @store.nil?
     {"make" => @store.make, "model" => @store.model, "thumb" => @store.thumb}
   end
 
@@ -23,14 +24,14 @@ class CherryPicker
     {"end"=>"eof"}
   end
 
-  def store v
-    raise StandardError, 'Required to call start prior to store' if @store.nil?
+  def store val
+    raise StandardError, 'Required to call start prior to #store' if @store.nil?
     if @is_make
-      @store.make = v
+      @store.make = val
     elsif @is_model
-      @store.model = v
+      @store.model = val
     elsif @is_thumb
-      @store.thumb = v
+      @store.thumb = val
     end
   end
 

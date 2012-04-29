@@ -30,10 +30,9 @@ class WorkCallbacks < XML::SAX::Document
 
   def end_element element
     if element == 'work'
-      @cherry_picker.done
       puts "#{element} ended"
+      @cherry_picker.done
     end
-    #cherry picker push to queue
   end
 
   def end_document

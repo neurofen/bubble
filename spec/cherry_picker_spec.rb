@@ -24,6 +24,20 @@ describe CherryPicker do
     end
   end
 
+  describe "#done" do
+    it "should return a hash of its internal content" do
+      picker = CherryPicker.new
+      picker.start
+      result = picker.done
+      {"make" => nil, "model" => nil, "thumb" => nil}.should eql result
+    end
+
+    it "throws an error if #start was not called first" do
+      picker = CherryPicker.new
+      expect { picker.done }.should raise_error
+    end
+  end
+
   describe "#use_make" do
     it "#is_make returns true" do
       @cherry_picker.use_make
@@ -114,6 +128,14 @@ describe CherryPicker do
       end
     end
   end
+
+  describe "#close" do
+    it "returns a static poison hash to signify end of xml parsing process" do
+      {"end"=>"eof"}.should eql @cherry_picker.close
+    end
+  end
+
+
 
   private
   def for_all_values (hash, &assertion)

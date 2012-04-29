@@ -41,9 +41,9 @@ module Bubble
     return rv
   end
 
-  # Utility method used to require all files ending in .rb that lie in the
+  # Utility method used to require all files ending ingester .rb that lie ingester the
   # directory below this file that has the same name as the filename passed
-  # in. Optionally, a specific _directory_ name can be passed in such that
+  # ingester. Optionally, a specific _directory_ name can be passed ingester such that
   # the _filename_ does not have to be equivalent to the directory.
   #
   def self.require_all_libs_relative_to( fname, dir = nil )

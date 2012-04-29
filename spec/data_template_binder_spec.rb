@@ -30,7 +30,7 @@ tmpl
     end
   end
 
-  describe "#render" do
+  describe "#generator" do
     it "renders data object bound to template, as expected" do
       actual = @templateBinder.render TestData.new ['one', 'two', 'three']
       actual.gsub(/\s+/, '').should eql  "<ul><li>one</li><li>two</li><li>three</li></ul>"
