@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<works>
+  <work>
+    <id>31820</id>
+    <filename>162042.jpg</filename>
+    <urls>
+      <url type="small">http://ih1.redbubble.net/work.31820.1.flat,135x135,075,f.jpg</url>
+      <url type="medium">http://ih1.redbubble.net/work.31820.1.flat,300x300,075,f.jpg</url>
+    </urls>
+    <exif>
+      <model>NIKON D80</model>
+      <make>NIKON CORPORATION</make>
+    </exif>
+  </work>
+  <work>
+    <id>2041</id>
+    <filename>2010.jpg</filename>
+    <image_width>3504</image_width>
+    <image_height>2336</image_height>
+    <urls>
+      <url type="small">http://ih1.redbubble.net/work.2041.1.flat,135x135,075,f.jpg</url>
+      <url type="large">http://ih1.redbubble.net/work.2041.1.flat,550x550,075,f.jpg</url>
+    </urls>
+    <exif>
+      <model>Canon EOS 20D</model>
+      <make>Canon</make>
+    </exif>
+  </work>
+</works>

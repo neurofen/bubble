@@ -5,7 +5,8 @@ class CherryPicker
 
   attr_reader :is_make, :is_model, :is_thumb
 
-  def initialize
+  def initialize processor
+    @processor = processor
     @is_thumb = false
     @is_make = false
     @is_model = false
@@ -17,11 +18,11 @@ class CherryPicker
 
   def done
     raise StandardError, 'Required to call #start prior to #done' if @store.nil?
-    {"make" => @store.make, "model" => @store.model, "thumb" => @store.thumb}
+    @processor.store create_record unless @store.make.nil? || @store.model.nil?
   end
 
   def close
-    {"end"=>"eof"}
+     @processor.next
   end
 
   def store val
@@ -58,4 +59,9 @@ class CherryPicker
     @is_make = false
     @is_model = false
   end
+
+  private
+    def create_record
+      {:make => @store.make, :model => @store.model, :thumb => @store.thumb}
+    end
 end

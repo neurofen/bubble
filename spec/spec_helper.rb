@@ -11,7 +11,7 @@ RSpec.configure do |config|
   # use mocha, flexmock or RR, uncomment the appropriate line:
   #
   # config.mock_framework = :mocha
-  # config.mock_framework = :flexmock
+  #config.mock_framework = :flexmock
   # config.mock_framework = :rr
   config.color_enabled = true
   config.formatter = :documentation

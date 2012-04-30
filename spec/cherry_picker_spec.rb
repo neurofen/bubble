@@ -1,13 +1,16 @@
 require "spec_helper"
 
+include RSpec::Mocks::ExampleMethods
+
 describe CherryPicker do
 
   before :all do
-    @cherry_picker = CherryPicker.new
+    @processor = double("Processor")
+    @cherry_picker = CherryPicker.new @processor
   end
 
   describe "#new" do
-    it "returns a CherryPicker instance" do
+    it "takes a Processor and returns a CherryPicker instance" do
       @cherry_picker.should be_an_instance_of CherryPicker
     end
 
@@ -21,20 +24,6 @@ describe CherryPicker do
 
     it "returns instance with #is_make set to false" do
        @cherry_picker.is_make.should be_false
-    end
-  end
-
-  describe "#done" do
-    it "should return a hash of its internal content" do
-      picker = CherryPicker.new
-      picker.start
-      result = picker.done
-      {"make" => nil, "model" => nil, "thumb" => nil}.should eql result
-    end
-
-    it "throws an error if #start was not called first" do
-      picker = CherryPicker.new
-      expect { picker.done }.should raise_error
     end
   end
 
@@ -101,41 +90,63 @@ describe CherryPicker do
   end
 
   describe "#store" do
-    it 'throws error when not initialised first, using start' do
-      picker = CherryPicker.new
+    it 'throws error when not initialised using #start' do
+      picker = CherryPicker.new @processor
       expect { picker.store 'should not be stored' }.should raise_error
     end
 
     it "does not store value if #use_thumb, #use_model or #use_make have not been called" do
-      picker = CherryPicker.new
+      picker = CherryPicker.new @processor
       picker.start
       picker.store 'should not be stored'
-
-      for_all_values(picker.done) do |val|
-        val.nil?.should be_true
-      end
+      picker.done
     end
 
     it "does not store value when #no_store has been called after #use_thumb, #use_model or #use_make" do
-      picker = CherryPicker.new
+      picker = CherryPicker.new @processor
       picker.start
       picker.use_thumb
       picker.no_store
       picker.store 'should not be stored'
+      picker.done
+    end
+  end
 
-      for_all_values(picker.done) do |val|
-        val.nil?.should be_true
-      end
+  describe "#done" do
+    it "calls processor#store when make and model values set" do
+      picker = CherryPicker.new @processor
+      picker.start
+      picker.use_make
+      picker.store 'stored as make'
+      picker.use_model
+      picker.store 'stored as model'
+      @processor.should_receive(:store).once
+      picker.done
+    end
+
+    it "does not call processor#store when make is nil and model is set" do
+      picker = CherryPicker.new @processor
+      picker.start
+      picker.use_make
+      picker.store 'stored as make'
+      picker.done
+    end
+
+    it "does not call processor#store when model is nil and make is set" do
+      picker = CherryPicker.new @processor
+      picker.start
+      picker.use_model
+      picker.store 'stored as model'
+      picker.done
     end
   end
 
   describe "#close" do
-    it "returns a static poison hash to signify end of xml parsing process" do
-      {"end"=>"eof"}.should eql @cherry_picker.close
+    it "calls processor#next" do
+      @processor.should_receive(:next).once
+      CherryPicker.new(@processor).close
     end
   end
-
-
 
   private
   def for_all_values (hash, &assertion)

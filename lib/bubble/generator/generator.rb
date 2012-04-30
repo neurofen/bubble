@@ -1,14 +1,17 @@
 class Generator
 
-  attr_reader :processor, :bubble_store, :output_path, :file_writer
+  attr_reader :processor, :output_path, :file_writer
 
-  def initialize(processor, bubble_store, output_path)
+  def initialize(processor, output_path, file_writer)
+    raise ArgumentError, 'Processor missing' if processor.nil?
+    raise ArgumentError, 'FileWriter missing' if file_writer.nil?
+    raise ArgumentError, 'Output path missing' if output_path.nil? || output_path.empty?
     @processor = processor
-    @bubble_store = bubble_store
     @output_path = output_path
+    @file_writer = file_writer
   end
 
-  def use file_writer
-    @file_writer = file_writer
+  def start
+
   end
 end

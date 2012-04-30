@@ -1,36 +1,40 @@
 require "spec_helper"
 
+include RSpec::Mocks::ExampleMethods
+
 describe Ingester do
 
   before :all do
-    @processor = Processor.new('blah', 'blah')
-    @bubble_store = BubbleStore.new()
-    @ingester = Ingester.new(@processor, @bubble_store)
+    db_path = File.expand_path('../../data/db', __FILE__)
+    @xml_file_path = 'blah'
+    @processor = Processor.new(@xml_file_path, 'blah', db_path)
+    @xml_parser = double("XmlParser")
+    @ingester = Ingester.new(@processor ,@xml_parser, @xml_file_path)
   end
 
   describe "#new" do
-    it "takes processor and bubbleStore, returns a Ingester instance" do
+    it "takes Processor, XmlParser, and xml_file_path and returns a Ingester instance" do
       @ingester.should be_an_instance_of Ingester
     end
 
-    it "throws an error when instantiated with nil processor" do
-      expect { Ingester.new(nil, @bubble_store) }.should raise_error
+    it "throws an error when instantiated without a Processor" do
+      expect { Ingester.new(nil ,@xml_parser, @xml_file_path) }.should raise_error
     end
 
-    it "throws an error when instantiated with an unexpected type for Processor" do
-      expect { Ingester.new(self, @bubble_store) }.should raise_error
+    it "throws an error when instantiated without an XmlParser" do
+      expect { Ingester.new(@processor ,nil, @xml_file_path) }.should raise_error
     end
 
-    it "throws an error when instantiated with nil bubbleStore" do
-      expect { Ingester.new(@processor, nil) }.should raise_error
-    end
-
-    it "throws an error when instantiated with an unexpected type for bubbleStore" do
-      expect { Ingester.new(@processor, self) }.should raise_error
+    it "throws an error when instantiated without an xml_file_path" do
+      expect { Ingester.new(@processor ,@xml_parser, nil) }.should raise_error
     end
   end
 
-  #describe "startIngesting" do
-  #  @ingester.startIngesting(:xml_file_path)
-  #end
+  describe "#start" do
+    it "calls XmlParser#parse once with path and callback" do
+      @xml_parser.should_receive(:parse).once.with(@xml_file_path, kind_of(WorkCallbacks))
+      @ingester.start
+    end
+  end
+
 end
