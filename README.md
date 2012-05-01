@@ -25,12 +25,12 @@ The input file only contains a small sample set of works.
 Examples
 --------
 
-git clone git@github.com:neurofen/bubble.git
-cd bubble
-bundle install
-rake
-chmod a+x bin/bubble.rb
-bin/bubble.rb 'data/works.xml' 'data/db'
+- git clone git@github.com:neurofen/bubble.git
+- cd bubble
+- bundle install
+- rake
+- chmod a+x bin/bubble.rb
+- bin/bubble.rb 'data/works.xml' 'data/db'
 
 Requirements
 ------------
