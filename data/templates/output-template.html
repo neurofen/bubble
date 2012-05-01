@@ -14,14 +14,14 @@
 
     <nav>
       <% @navigation.each do |nav| %>
-        <a href="<%= nav[1] %>"><%= nav[0] %></a>
+        <a href="<%= nav[1] %>"><%= nav[0] %></a><br/>
       <% end %>
     </nav>
   </header>
-  <ul>
+
   <% @thumbnails.each do |thumb| %>
-    <li><img src="<%= thumb %>"/></li>
+    <img src="<%= thumb %>"/><br/>
   <% end %>
-  </ul>
+
 </body>
 </html>

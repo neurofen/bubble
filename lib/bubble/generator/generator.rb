@@ -39,6 +39,7 @@ class Generator
       all_makes.each do |make|
         navigation.push([ make, "#{string2hex(make)}.html" ])
       end
+      navigation
     end
 
   #Creating Makes
@@ -53,12 +54,13 @@ class Generator
     end
 
     def create_make_navigation_using models
-      puts "make_display_data_from{#{models})"
+      puts "create_make_navigation_using{#{models})"
       navigation = []
       navigation.push([ 'index',  "index.html" ])
       models.each do |model|
         navigation.push([ model,  "#{string2hex(model)}.html" ])
       end
+      navigation
     end
 
   #Creating models
