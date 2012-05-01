@@ -46,7 +46,6 @@ class BubbleStore
 		def save_or_update record
 			save_update_makes(record[:make], record[:model])
 			save_update_make_models([record[:make], record[:model]], record[:thumb])
-
 		end
 
 		def save_update_makes key, model

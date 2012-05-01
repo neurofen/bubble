@@ -1,13 +1,12 @@
 require "spec_helper"
 
-include RSpec::Mocks::ExampleMethods
 
 describe Ingester do
 
   before :all do
     db_path = File.expand_path('../../data/db', __FILE__)
     @xml_file_path = 'blah'
-    @processor = Processor.new(@xml_file_path, 'blah', db_path)
+    @processor = double("Processor")
     @xml_parser = double("XmlParser")
     @ingester = Ingester.new(@processor ,@xml_parser, @xml_file_path)
   end

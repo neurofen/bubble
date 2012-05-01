@@ -2,6 +2,8 @@ require 'rubygems'
 require 'rspec'
 require 'yaml'
 
+include RSpec::Mocks::ExampleMethods
+
 require File.expand_path('../../lib/bubble', __FILE__)
 
 RSpec.configure do |config|
@@ -16,4 +18,3 @@ RSpec.configure do |config|
   config.color_enabled = true
   config.formatter = :documentation
 end
-

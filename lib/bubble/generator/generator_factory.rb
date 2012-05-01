@@ -8,12 +8,12 @@ class GeneratorFactory
   end
 
   def create_generator_for output_path
-    Generator.new(@processor, output_path, create_file_writer)
+    Generator.new(@processor, create_file_writer(output_path))
   end
 
   private
-    def create_file_writer
-      FileWriter.new(create_template_renderer)
+    def create_file_writer output_path
+      FileWriter.new(create_template_renderer, FileMaker.new(output_path))
     end
 
     def create_template_renderer

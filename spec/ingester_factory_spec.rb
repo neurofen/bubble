@@ -14,11 +14,4 @@ describe IngesterFactory do
     end
   end
 
-  #describe "#create_generator_for" do
-  #  it "creates an instance of Generator" do
-  #    @output_path = 'xml source path'
-  #    @generator = @factory.create_generator_for(@output_path, 'template_filename')
-  #    @generator.should be_instance_of Generator
-  #  end
-  #end
 end

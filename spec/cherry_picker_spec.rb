@@ -1,7 +1,5 @@
 require "spec_helper"
 
-include RSpec::Mocks::ExampleMethods
-
 describe CherryPicker do
 
   before :all do

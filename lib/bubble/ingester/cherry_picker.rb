@@ -28,10 +28,13 @@ class CherryPicker
   def store val
     raise StandardError, 'Required to call start prior to #store' if @store.nil?
     if @is_make
+      puts "storing [#{val}] as make"
       @store.make = val
     elsif @is_model
+      puts "storing [#{val}] as model"
       @store.model = val
     elsif @is_thumb
+      puts "storing [#{val}] as thumb"
       @store.thumb = val
     end
   end

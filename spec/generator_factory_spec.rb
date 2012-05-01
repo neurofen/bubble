@@ -1,6 +1,5 @@
 require "spec_helper"
 
-include RSpec::Mocks::ExampleMethods
 
 describe GeneratorFactory do
 
@@ -31,6 +30,7 @@ describe GeneratorFactory do
   describe "#create_generator_for" do
     it "creates an instance of Generator" do
       @output_path = '/tmp'
+      @processor.should_receive(:bubble_store).once
       @generator = @factory.create_generator_for(@output_path)
       @generator.should be_instance_of Generator
     end

@@ -15,26 +15,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e129292-2c0e-49f2-96a3-4f01394d7ce1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bubble/ingester/ingester_factory.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/bubble_store_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/generator_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/ingester_factory_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/processor_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/test_input.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/xml_parser_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/bubble.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bubble/generator/file_maker.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/file_maker_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/process_runner_spec.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/bubble" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bubble.iml" afterPath="$PROJECT_DIR$/bubble.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bubble.ipr" afterPath="$PROJECT_DIR$/bubble.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bubble.iws" afterPath="$PROJECT_DIR$/bubble.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/templates/output-template.html" afterPath="$PROJECT_DIR$/data/templates/output-template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/generator/file_writer.rb" afterPath="$PROJECT_DIR$/lib/bubble/generator/file_writer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/generator/generator.rb" afterPath="$PROJECT_DIR$/lib/bubble/generator/generator.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/generator/generator_factory.rb" afterPath="$PROJECT_DIR$/lib/bubble/generator/generator_factory.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/ingester/cherry_picker.rb" afterPath="$PROJECT_DIR$/lib/bubble/ingester/cherry_picker.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/ingester/ingester.rb" afterPath="$PROJECT_DIR$/lib/bubble/ingester/ingester.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/ingester/work_callback.rb" afterPath="$PROJECT_DIR$/lib/bubble/ingester/work_callback.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/processor.rb" afterPath="$PROJECT_DIR$/lib/bubble/processor.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/repository/bubble_store.rb" afterPath="$PROJECT_DIR$/lib/bubble/repository/bubble_store.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/cherry_picker_spec.rb" afterPath="$PROJECT_DIR$/spec/cherry_picker_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/file_writer_spec.rb" afterPath="$PROJECT_DIR$/spec/file_writer_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/generator_factory_spec.rb" afterPath="$PROJECT_DIR$/spec/generator_factory_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/generator_spec.rb" afterPath="$PROJECT_DIR$/spec/generator_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/ingester_factory_spec.rb" afterPath="$PROJECT_DIR$/spec/ingester_factory_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/ingester_spec.rb" afterPath="$PROJECT_DIR$/spec/ingester_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
     </list>
@@ -95,64 +95,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="processor.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bubble/processor.rb">
+      <file leaf-file-name="bubble.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/bubble.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="86" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generator.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bubble/generator/generator.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="125" selection-end="253" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generator_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/generator_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="444" selection-end="598" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generator_factory.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/bubble/generator/generator_factory.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="88" selection-start="212" selection-end="212" vertical-scroll-proportion="0.10398614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generator_factory_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/generator_factory_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="87" selection-start="124" selection-end="195" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_template_binder.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bubble/generator/data_template_binder.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="21" selection-end="39" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file_writer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/bubble/generator/file_writer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="2" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+            <state line="14" column="41" selection-start="265" selection-end="265" vertical-scroll-proportion="0.36395147">
               <folding />
             </state>
           </provider>
@@ -172,22 +118,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/test_input.xml" />
-        <option value="$PROJECT_DIR$/spec/xml_parser_spec.rb" />
-        <option value="$PROJECT_DIR$/lib/bubble/ingester/ingester_factory.rb" />
-        <option value="$PROJECT_DIR$/lib/bubble/ingester/xml_parser.rb" />
-        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
-        <option value="$PROJECT_DIR$/lib/bubble/ingester/cherry_picker.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/spec/processor_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/cherry_picker_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/ingester_spec.rb" />
-        <option value="$PROJECT_DIR$/lib/bubble/ingester/ingester.rb" />
         <option value="$PROJECT_DIR$/spec/generator_spec.rb" />
-        <option value="$PROJECT_DIR$/lib/bubble/generator/generator.rb" />
-        <option value="$PROJECT_DIR$/lib/bubble/generator/generator_factory.rb" />
         <option value="$PROJECT_DIR$/spec/generator_factory_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/file_writer_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/file_maker_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/bubble/generator/generator_factory.rb" />
+        <option value="$PROJECT_DIR$/lib/bubble/repository/bubble_store.rb" />
+        <option value="$PROJECT_DIR$/spec/process_runner_spec.rb" />
         <option value="$PROJECT_DIR$/lib/bubble/processor.rb" />
+        <option value="$PROJECT_DIR$/lib/bubble/ingester/cherry_picker.rb" />
+        <option value="$PROJECT_DIR$/lib/bubble/generator/file_maker.rb" />
+        <option value="$PROJECT_DIR$/lib/bubble/generator/file_writer.rb" />
+        <option value="$PROJECT_DIR$/lib/bubble/ingester/work_callback.rb" />
+        <option value="$PROJECT_DIR$/data/templates/output-template.html" />
+        <option value="$PROJECT_DIR$/bin/bubble" />
+        <option value="$PROJECT_DIR$/lib/bubble/generator/generator.rb" />
+        <option value="$PROJECT_DIR$/bin/bubble.rb" />
       </list>
     </option>
   </component>
@@ -267,6 +213,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test_out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -282,46 +242,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,6 +274,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,39 +344,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="RSpec.generator_factory_spec">
-    <configuration default="false" name="xml_parser_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="bubble" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/xml_parser_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Ruby.bubble">
     <configuration default="false" name="processor_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="bubble" />
@@ -475,7 +377,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="cherry_picker_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="xml_parser_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="bubble" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -493,7 +395,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/cherry_picker_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/xml_parser_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -507,7 +409,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ingester_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="generator_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="bubble" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -525,7 +427,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/ingester_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/generator_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -539,7 +441,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="generator_factory_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="file_writer_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="bubble" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -557,7 +459,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/generator_factory_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/file_writer_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -567,6 +469,26 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="bubble" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="bubble" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/bin" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/bin/bubble.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -789,11 +711,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="RSpec.xml_parser_spec" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.processor_spec" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.cherry_picker_spec" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.ingester_spec" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.generator_factory_spec" />
+      <item index="0" class="java.lang.String" itemvalue="RSpec.processor_spec" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.xml_parser_spec" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.generator_spec" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.file_writer_spec" />
+      <item index="4" class="java.lang.String" itemvalue="Ruby.bubble" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -856,8 +778,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -879,7 +801,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="hookup ingester to repo and processor" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -893,6 +815,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="first commit" />
+    <MESSAGE value="hookup ingester to repo and processor" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -936,114 +859,107 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/ingester_spec.rb">
+    <entry file="file://$PROJECT_DIR$/lib/bubble/repository/bubble_store.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="14" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.75389946">
+        <state line="8" column="10" selection-start="193" selection-end="197" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/work_callback.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="63" selection-end="76" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/cherry_picker.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="58" selection-start="649" selection-end="649" vertical-scroll-proportion="0.779896">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/xml_parser.rb">
+    <entry file="file://$PROJECT_DIR$/spec/xml_parser_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/ingester_factory.rb">
+    <entry file="file://$PROJECT_DIR$/lib/bubble/generator/file_maker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="90" selection-end="109" vertical-scroll-proportion="0.1559792">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/data_template_binder_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="427" selection-end="558" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/file_writer_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="462" selection-end="462" vertical-scroll-proportion="0.49393415">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/cherry_picker_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="23" selection-end="59" vertical-scroll-proportion="0.025996534">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bubble/generator/data_template_binder.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="21" selection-end="39" vertical-scroll-proportion="0.0">
+        <state line="2" column="26" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/generator/file_writer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+        <state line="14" column="29" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/processor_spec.rb">
+    <entry file="file://$PROJECT_DIR$/lib/bubble/generator/display_data.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="68" selection-start="84" selection-end="131" vertical-scroll-proportion="0.13440861">
+        <state line="2" column="17" selection-start="21" selection-end="32" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bubble/generator/generator.rb">
+    <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/cherry_picker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="125" selection-end="253" vertical-scroll-proportion="0.0">
+        <state line="36" column="28" selection-start="820" selection-end="820" vertical-scroll-proportion="0.93587524">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/generator_spec.rb">
+    <entry file="file://$PROJECT_DIR$/data/templates/output-template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="444" selection-end="598" vertical-scroll-proportion="0.0">
+        <state line="16" column="30" selection-start="266" selection-end="266" vertical-scroll-proportion="-10.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/generator_factory_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/data_template_binder_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="87" selection-start="124" selection-end="195" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/process_runner_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="241" selection-end="284" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/processor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="86" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
+        <state line="14" column="12" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/bubble/generator/generator_factory.rb">
+    <entry file="file://$PROJECT_DIR$/test_out/Canon EOS 20D.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="88" selection-start="212" selection-end="212" vertical-scroll-proportion="0.10398614">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bubble/generator/generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="8" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.915078">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/work_callback.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="46" selection-start="683" selection-end="683" vertical-scroll-proportion="0.4540728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/test_input.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/bubble.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="41" selection-start="265" selection-end="265" vertical-scroll-proportion="0.36395147">
           <folding />
         </state>
       </provider>

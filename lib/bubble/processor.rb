@@ -6,9 +6,10 @@ class Processor
     @xml_filename = xml_filename
     @output_path = output_path
     @bubble_store = BubbleStore.new(db_path)
-    template = File.expand_path('../../data/templates/output-template.html', __FILE__)
+    template = File.expand_path('../../../data/templates/output-template.html', __FILE__)
     @ingester_facotory = IngesterFactory.new(self)
     @generator_factory = GeneratorFactory.new(self, template)
+    @bubble_store.drop
   end
 
   def start

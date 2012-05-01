@@ -14,13 +14,13 @@
 
     <nav>
       <% @navigation.each do |nav| %>
-        <a href="<%= nav.url %>"><%= nav.name %></a>
+        <a href="<%= nav['url'] %>"><%= nav['title'] %></a>
       <% end %>
     </nav>
   </header>
   <ul>
   <% @thumbnails.each do |thumb| %>
-    <li><img src="<%= thumb.src %>"/></li>
+    <li><img src="<%= thumb %>"/></li>
   <% end %>
   </ul>
 </body>
