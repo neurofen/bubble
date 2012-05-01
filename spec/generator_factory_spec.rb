@@ -30,7 +30,7 @@ describe GeneratorFactory do
   describe "#create_generator_for" do
     it "creates an instance of Generator" do
       @output_path = '/tmp'
-      @processor.should_receive(:bubble_store).once
+      @processor.should_receive(:bubble_store).twice
       @generator = @factory.create_generator_for(@output_path)
       @generator.should be_instance_of Generator
     end

@@ -6,8 +6,9 @@ describe Generator do
   before :each do
     @processor = double("Processor")
     @file_writer = double("FileWriter")
+    @view_helper = double("ViewHelper")
     @processor.should_receive(:bubble_store).once
-    @generator = Generator.new(@processor, @file_writer)
+    @generator = Generator.new(@processor, @file_writer, @view_helper)
   end
 
   describe "#new" do
@@ -16,11 +17,15 @@ describe Generator do
     end
 
     it "throws an error when instantiated with nil Processor" do
-      expect { Generator.new(nil, @file_writer) }.should raise_error
+      expect { Generator.new(nil, @file_writer, @view_helper) }.should raise_error
     end
 
     it "throws an error when instantiated with nil FileWriter" do
-      expect { Generator.new(@processor, nil) }.should raise_error
+      expect { Generator.new(@processor, nil, @view_helper) }.should raise_error
+    end
+
+    it "throws an error when instantiated with nil ViewHelper" do
+      expect { Generator.new(@processor, @file_writer, nil) }.should raise_error
     end
   end
 

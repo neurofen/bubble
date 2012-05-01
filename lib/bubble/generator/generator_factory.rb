@@ -8,10 +8,14 @@ class GeneratorFactory
   end
 
   def create_generator_for output_path
-    Generator.new(@processor, create_file_writer(output_path))
+    Generator.new(@processor, create_file_writer(output_path), create_view_helper)
   end
 
   private
+    def create_view_helper
+      ViewHelper.new(@processor.bubble_store)
+    end
+
     def create_file_writer output_path
       FileWriter.new(create_template_renderer, FileMaker.new(output_path))
     end

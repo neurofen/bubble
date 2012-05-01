@@ -8,12 +8,12 @@ class FileWriter
   end
 
   def write_to_page filename, display_data
-    puts ">>> BEFORE: #{display_data.title}, #{display_data.navigation}"
+    #puts ">>> BEFORE: #{display_data.title}, #{display_data.navigation}"
 
     @file_maker.make_writable(filename,
                               lambda{|file|
                                 content =  @template_renderer.render display_data
-                                puts content
+                                #puts content
                                 file.puts content})
   end
 
