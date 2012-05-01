@@ -27,7 +27,7 @@ describe FileWriter do
     it "writes content to a file at filename" do
       filename = 'a file name'
       @file_maker.should_receive(:make_writable).once.with(filename, kind_of(Proc))
-      @file_writer.write_to_page filename, nil
+      @file_writer.write_to_page filename, DisplayData.new('title', [], [])
     end
   end
 

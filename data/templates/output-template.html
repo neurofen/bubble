@@ -14,7 +14,7 @@
 
     <nav>
       <% @navigation.each do |nav| %>
-        <a href="<%= nav['url'] %>"><%= nav['title'] %></a>
+        <a href="<%= nav[1] %>"><%= nav[0] %></a>
       <% end %>
     </nav>
   </header>

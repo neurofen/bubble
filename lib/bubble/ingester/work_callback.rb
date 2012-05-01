@@ -29,7 +29,8 @@ class WorkCallbacks < XML::SAX::Document
   end
 
   def characters val
-    @cherry_picker.store val.gsub(/\r\n?/, "")
+    #@cherry_picker.store val.gsub(/\r\n?/, "")
+    @cherry_picker.store val
   end
 
   def end_element element

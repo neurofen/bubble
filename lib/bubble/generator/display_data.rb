@@ -2,6 +2,8 @@ require "erb"
 
 class DisplayData
 
+  attr_reader :title, :navigation, :thumbnails
+
   def initialize(title, navigation = [], thumbnails = [])
     @title = title
     @navigation = navigation

@@ -4,7 +4,7 @@ class DataTemplateBinder
 
   def initialize(template)
     raise ArgumentError, 'Template content is empty' if template.nil? || template.empty?
-    @renderer = ERB.new(template)
+    @renderer = ERB.new(template, nil, "%<>")
   end
 
   def render display_data
