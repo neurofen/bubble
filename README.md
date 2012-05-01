@@ -30,7 +30,7 @@ Examples
 - bundle install
 - rake
 - chmod a+x bin/bubble.rb
-- bin/bubble.rb 'data/works.xml' 'data/db'
+- bin/bubble.rb 'data/works.xml' 'test_out'
 
 Requirements
 ------------
