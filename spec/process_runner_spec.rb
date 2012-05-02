@@ -13,7 +13,7 @@ describe "Running Processor" do
     db_path = File.expand_path('../../data/db', __FILE__)
 
     Processor.new(xml_filename, @output_path, db_path).start
-    Dir.glob(File.join(@output_path, '**', '*')).select { |file| File.file?(file) }.count.should be 5
+    Dir.glob(File.join(@output_path, '**', '*.html')).select { |file| File.file?(file) }.count.should be 5
   end
 end
 
