@@ -13,15 +13,17 @@ class Processor
   end
 
   def start
+    puts "\n\n\t------------------------\n\tStarting Ingestion\n\t------------------------\n\n"
     @ingester_facotory.create_ingester_for(@xml_filename).start
   end
 
   def next
+    puts "\n\n\t------------------------\n\tStarting Page Generation\n\t------------------------\n\n"
     @generator_factory.create_generator_for(@output_path).start
   end
 
   def done
-    puts "finished processing - provide basic run stats"
+    puts "\n\n\t------------------------\n\tProcessing complete\n\t------------------------\n\n "
   end
 
   def store record

@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'nokogiri'
 
 include Nokogiri
@@ -15,7 +14,6 @@ class WorkCallbacks < XML::SAX::Document
 
   def start_element(element, attributes = [])
     if element == 'work'
-      puts "#{element} started"
       @cherry_picker.start
     elsif element == 'url' && attributes[0][1] == 'small'
       @cherry_picker.use_thumb
@@ -29,13 +27,11 @@ class WorkCallbacks < XML::SAX::Document
   end
 
   def characters val
-    #@cherry_picker.store val.gsub(/\r\n?/, "")
     @cherry_picker.store val
   end
 
   def end_element element
     if element == 'work'
-      puts "#{element} ended"
       @cherry_picker.done
     else
       @cherry_picker.no_store

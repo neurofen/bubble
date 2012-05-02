@@ -13,6 +13,6 @@ class ViewHelper
 
 
   def create_page_for type
-    lambda {|arg1, arg2| return @helpers[type].create_page_from(arg1, arg2)}
+    lambda {|arg1, arg2, arg3| return @helpers[type].create_page_from(arg1, arg2, arg3)}
   end
 end
