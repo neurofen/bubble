@@ -3,7 +3,7 @@ require "spec_helper"
 describe FileMaker do
 
   before :all do
-    output_path = './'
+    output_path = '/tmp/'
     @file_maker = FileMaker.new(output_path)
   end
 
@@ -26,7 +26,6 @@ describe FileMaker do
     it "writes content to a file at filename" do
       filename = 'a file name'
       test = lambda{|file| file.should be_instance_of File}
-      #@file_maker.should_receive(:make_writable).once.with(filename, kind_of(Proc))
       @file_maker.make_writable filename, test
     end
   end

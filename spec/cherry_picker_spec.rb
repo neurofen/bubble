@@ -146,12 +146,4 @@ describe CherryPicker do
     end
   end
 
-  private
-  def for_all_values (hash, &assertion)
-    hash.each do |key, value|
-      assertion.call(value)
-    end
-
-  end
-
 end

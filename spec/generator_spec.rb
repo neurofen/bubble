@@ -29,4 +29,28 @@ describe Generator do
     end
   end
 
+  describe "#start" do
+    it "should call repository once and filewriter once, to create index page, when the repository is empty" do
+      bubble_store = double("BubbleStore")
+      bubble_store.should_receive(:get_all_makes).once.and_return([])
+      stubbed_processor = StubbedProcessor.new bubble_store
+      @view_helper.should_receive(:create_page_for).once.and_return(lambda{|a,b, c| return [[1][2]]})
+      @file_writer.should_receive(:write_to_page).once
+      Generator.new(stubbed_processor, @file_writer, @view_helper).start
+    end
+  end
+
+end
+
+class StubbedProcessor
+  attr_accessor :bubble_store
+
+  def initialize bubble_store
+    @bubble_store = bubble_store
+  end
+
+  def done
+
+  end
+
 end

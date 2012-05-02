@@ -11,15 +11,9 @@ end
 desc "Run specs"
 RSpec::Core::RakeTask.new(:spec)
 
-#desc "Generate code coverage"
-#RSpec::Core::RakeTask.new(:coverage) do |t|
-#  t.rcov = true
-#  t.rcov_opts = ['--exclude', 'spec']
-#end
 
 task :default => :spec
-#task 'cov' => :coverage
-task 'gem:release' => 'test:run'
+task 'gem:release' => ':spec'
 
 Bones {
   name     'bubble'
