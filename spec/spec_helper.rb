@@ -1,8 +1,11 @@
 require 'rubygems'
 require 'rspec'
 require 'yaml'
+require 'simplecov'
 
 include RSpec::Mocks::ExampleMethods
+
+SimpleCov.start
 
 require File.expand_path('../../lib/bubble', __FILE__)
 
