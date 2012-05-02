@@ -15,7 +15,7 @@ class Generator
     puts "found #{all_makes.length} makes : #{all_makes}"
 
     all_makes.each do |make|
-      generate_make_from(make, generate_models_for(make))
+      generate_make_from(make, with_models_for(make))
     end
 
     generate_index_from('index', all_makes)
@@ -23,22 +23,27 @@ class Generator
   end
 
   private
-  def generate_models_for make
+  def with_models_for make
     make_models = @store.get_models_for(make)
     make_models.each do |model|
-      result =  @view_helper.create_page_for(:MODEL).call(make, model)
-      @file_writer.write_to_page result[0], result[1]
+      create_page_for(:MODEL, make, model)
     end
     make_models
   end
 
   def generate_make_from make, make_models
-    result = @view_helper.create_page_for(:MAKE).call(make, make_models)
-    @file_writer.write_to_page result[0], result[1]
+    create_page_for(:MAKE, make, make_models)
   end
 
   def generate_index_from title, makes
-    result = @view_helper.create_page_for(:INDEX).call(title, makes)
+    create_page_for(:INDEX, title, makes)
+  end
+
+  def create_page_for type, arg1, arg2
+    render @view_helper.create_page_for(type)[arg1, arg2]
+  end
+
+  def render result
     @file_writer.write_to_page result[0], result[1]
   end
 
