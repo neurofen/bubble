@@ -25,20 +25,14 @@ The input file only contains a small sample set of works.
 Examples
 --------
 
-- git clone git@github.com:neurofen/bubble.git
-- cd bubble
-- bundle install
-- rake
-- chmod a+x bin/bubble.rb
 - bin/bubble.rb 'data/works.xml' 'test_out'
 
 Requirements
 ------------
 
-The RedBubble system has many digital images often taken with a camera. We have exported EXIF data from a selection of these images.
-Your task is to create a set of static HTML files to allow a user to browse these images.
+Digital images are often stored with camera information in an xml format.
+Using this xml feed, create a set of static HTML files to allow a user to browse these images.
 
-Create a batch processor that takes the input file and produces a single HTML file (based on the output template given with this test) for each camera make, camera model and also an index.
 
 The index HTML page must contain:
 - Thumbnail images for the first 10 work
@@ -54,12 +48,16 @@ Each Camera Model HTML page must contain:
 
 The batch processor should take the location of the input file and the output directory as parameters.
 
-The input file only contains a small sample set of works.
+While the sample xml file is small, the solution is expected to handle files in excess of 500Mb.
 
 Install
 -------
 
-* FIXME (sudo gem install, anything else)
+- git clone git@github.com:neurofen/bubble.git
+- cd bubble
+- bundle install
+- rake
+- chmod a+x bin/bubble.rb
 
 Author
 ------
