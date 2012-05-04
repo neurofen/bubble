@@ -1,5 +1,3 @@
-require 'progress_bar'
-
 class Processor
 
   attr_reader :bubble_store
