@@ -7,7 +7,7 @@ class Make
   end
 
   def create_page_from(make, models, thumb_bucket)
-    puts "create_make_page_from(#{make}, #{models})"
+    # puts "create_make_page_from(#{make}, #{models})"
     ["#{string2hex(make)}.html", make_display_data_from(make, models, thumb_bucket)]
   end
 

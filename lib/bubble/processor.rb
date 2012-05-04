@@ -1,3 +1,5 @@
+require 'progress_bar'
+
 class Processor
 
   attr_reader :bubble_store
@@ -10,24 +12,31 @@ class Processor
     @ingester_facotory = IngesterFactory.new(self)
     @generator_factory = GeneratorFactory.new(self, template)
     @bubble_store.drop
+    @spinner = Spinner.new
   end
 
   def start
-    puts "\n\n\t------------------------\n\tStarting Ingestion\n\t------------------------\n\n"
+    puts "\n\n------------------------\nStarting Ingestion"
+    @spinner.start
     @ingester_facotory.create_ingester_for(@xml_filename).start
   end
 
   def next
-    puts "\n\n\t------------------------\n\tStarting Page Generation\n\t------------------------\n\n"
+    @spinner.stop
+    puts "\rStarting Page Generation\n\n"
     @generator_factory.create_generator_for(@output_path).start
   end
 
   def done
-    puts "\n\n\t------------------------\n\tProcessing complete\n\t------------------------\n\n "
+    puts "\n\nProcessing complete\n------------------------\n\n "
   end
 
   def store record
     @bubble_store.store record
+  end
+
+  def monitor max
+    ProcessMonitor.new max
   end
 
 end

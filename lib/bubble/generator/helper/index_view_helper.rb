@@ -3,7 +3,7 @@ include VIEW::HELPER
 class Index
 
   def create_page_from title, all_makes, thumb_bucket
-    puts "create_index_page_from(#{title}, #{all_makes})"
+    # puts "create_index_page_from(#{title}, #{all_makes})"
     ["#{title}.html", index_display_data_from(all_makes, thumb_bucket)]
   end
 
