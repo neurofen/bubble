@@ -11,6 +11,7 @@ class Processor
     @generator_factory = GeneratorFactory.new(self, template)
     @bubble_store.drop
     @spinner = Spinner.new
+    @start = Time.now
   end
 
   def start
@@ -26,7 +27,8 @@ class Processor
   end
 
   def done
-    puts "\n\nProcessing complete\n------------------------\n\n "
+    duration = Time.now - @start
+    puts "\n\nProcessing completed in %02i:%02i:%02i\n------------------------\n\n" % [duration/3600, duration%3600/60, duration%60]
   end
 
   def store record
