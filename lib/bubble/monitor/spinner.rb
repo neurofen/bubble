@@ -24,6 +24,6 @@ class Spinner
 
   def stop
     @start = false
-    #@t.join
+    @t.join
   end
 end

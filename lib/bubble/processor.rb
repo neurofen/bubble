@@ -1,6 +1,8 @@
+include MONITOR
+
 class Processor
 
-  attr_reader :bubble_store
+  attr_reader :bubble_store, :monitor
 
   def initialize(xml_filename, output_path, db_path)
     @xml_filename = xml_filename
@@ -10,33 +12,27 @@ class Processor
     @ingester_facotory = IngesterFactory.new(self)
     @generator_factory = GeneratorFactory.new(self, template)
     @bubble_store.drop
-    @spinner = Spinner.new
-    @start = Time.now
+    @monitor = create_progress_monitor
   end
 
   def start
     puts "\n\n------------------------\nStarting Ingestion"
-    @spinner.start
+    @monitor.start :SPINNER
     @ingester_facotory.create_ingester_for(@xml_filename).start
   end
 
   def next
-    @spinner.stop
+    @monitor.stop :SPINNER
     puts "\rStarting Page Generation\n\n"
     @generator_factory.create_generator_for(@output_path).start
   end
 
   def done
-    duration = Time.now - @start
-    puts "\n\nProcessing completed in %02i:%02i:%02i\n------------------------\n\n" % [duration/3600, duration%3600/60, duration%60]
+    puts "\n\nProcessing completed in #{@monitor.total_time}\n------------------------\n\n"
   end
 
   def store record
     @bubble_store.store record
-  end
-
-  def monitor max
-    ProcessMonitor.new max
   end
 
 end
