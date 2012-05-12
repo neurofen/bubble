@@ -1,3 +1,5 @@
+require 'fiber'
+
 class Generator
 
   def initialize(processor, file_writer, view_helper)
@@ -11,26 +13,35 @@ class Generator
   end
 
   def start
-    all_makes = @store.get_all_makes
-    index_thumbs = ThumbBucket.new
-    monitor = @processor.monitor
-    monitor.start :BAR, all_makes.length
+    @processor.monitor.start(:BAR, @store.get_number_of_makes)
 
-    generate_make_and_model_pages_for(all_makes, index_thumbs, monitor)
-    generate_index_from('index', all_makes, index_thumbs)
-
+    generate_by(@store.get_all_makes_batched_by(100)).resume
+    
     @processor.done
   end
 
   private
-  def generate_make_and_model_pages_for(all_makes, index_thumbs, monitor)
+
+  def generate_by source
+    index_thumbs = ThumbBucket.new
+
+    Fiber.new do
+      while source.alive? do
+        batch = source.resume
+        generate_make_and_model_pages_for(batch, index_thumbs)
+      end
+      generate_index_from('index', @store.get_all_makes, index_thumbs)
+    end    
+  end
+
+  def generate_make_and_model_pages_for(all_makes, index_thumbs)
     all_makes.each do |make|
-      monitor.notify :BAR
+      @processor.monitor.notify :BAR
 
       make_thumbs = ThumbBucket.new
       generate_make_from(make, with_models_for(make, make_thumbs), make_thumbs)
       index_thumbs.add make_thumbs.contents
-    end
+    end unless all_makes.nil?
   end
 
   def with_models_for make, thumb_bucket

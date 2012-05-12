@@ -32,6 +32,8 @@ describe Generator do
   describe "#start" do
     it "should call repository once and filewriter once, to create index page, when the repository is empty" do
       bubble_store = double("BubbleStore")
+      bubble_store.should_receive(:get_number_of_makes).once.and_return(0)
+      bubble_store.should_receive(:get_all_makes_batched_by).once.and_return(fiber_block)
       bubble_store.should_receive(:get_all_makes).once.and_return([])
       monitor = double("ProcessMonitor")
       monitor.should_receive(:start).once.with(:BAR, 0)
@@ -39,6 +41,12 @@ describe Generator do
       @view_helper.should_receive(:create_page_for).once.and_return(lambda{|a,b, c| return [[1][2]]})
       @file_writer.should_receive(:write_to_page).once
       Generator.new(stubbed_processor, @file_writer, @view_helper).start
+    end
+  end
+
+  def fiber_block
+    Fiber.new do
+      puts 'blocked called'
     end
   end
 

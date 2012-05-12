@@ -24,9 +24,23 @@ class BubbleStore
 		save_or_update(record) unless record.nil?
 	end
 
+	def get_number_of_makes
+		get_all_makes.length
+	end
+
 	def get_all_makes
 		@makes_db.transaction do
 			return @makes_db.roots.sort
+		end
+	end
+
+	def get_all_makes_batched_by(batch_size = 50)
+		all_makes = get_all_makes
+		Fiber.new do
+		  until all_makes.empty? do
+		    batch = all_makes.pop(batch_size)
+		    Fiber.yield batch
+		  end
 		end
 	end
 
