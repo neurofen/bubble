@@ -15,18 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e129292-2c0e-49f2-96a3-4f01394d7ce1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bubble/generator/monitor.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bubble/monitor/monitor_progress_bar.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bubble/monitor/process_monitor.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/process_monitor_spec.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bubble/process_monitor.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_out/README" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bubble/spinner.rb" afterPath="$PROJECT_DIR$/lib/bubble/monitor/spinner.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bubble.iml" afterPath="$PROJECT_DIR$/bubble.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bubble.iws" afterPath="$PROJECT_DIR$/bubble.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/generator/generator.rb" afterPath="$PROJECT_DIR$/lib/bubble/generator/generator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/bubble/processor.rb" afterPath="$PROJECT_DIR$/lib/bubble/processor.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/generator_spec.rb" afterPath="$PROJECT_DIR$/spec/generator_spec.rb" />
     </list>
     <ignored path="bubble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +87,7 @@
       <file leaf-file-name="process_monitor.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/bubble/monitor/process_monitor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="8" selection-start="851" selection-end="851" vertical-scroll-proportion="0.7077922">
+            <state line="44" column="8" selection-start="851" selection-end="851" vertical-scroll-proportion="1.4285715">
               <folding />
             </state>
           </provider>
@@ -184,6 +174,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -198,6 +189,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,24 +270,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="158" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="175" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="175" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="163" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="163" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="180" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1089" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1088" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1089" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="178" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="173" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -724,26 +714,26 @@
     <frame x="0" y="22" width="1440" height="822" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32739726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32739726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.248023" sideWeight="0.6726027" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.248023" sideWeight="0.6726027" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -834,112 +824,82 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/spec/file_maker_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="72" selection-start="795" selection-end="795" vertical-scroll-proportion="0.8051948">
-          <folding />
-        </state>
+        <state line="32" column="72" selection-start="795" selection-end="795" vertical-scroll-proportion="0.8051948" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/repository/bubble_store.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="24" selection-end="35" vertical-scroll-proportion="0.032467533">
-          <folding />
-        </state>
+        <state line="2" column="17" selection-start="24" selection-end="35" vertical-scroll-proportion="0.032467533" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.2-p0/gems/highline-1.6.11/lib/highline/system_extensions.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="265" selection-end="265" vertical-scroll-proportion="0.35714287">
-          <folding />
-        </state>
+        <state line="11" column="6" selection-start="265" selection-end="265" vertical-scroll-proportion="0.35714287" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/generator_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="54" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.7703281">
-          <folding />
-        </state>
+        <state line="36" column="54" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.7703281" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/monitor/spinner.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="4" selection-start="405" selection-end="405" vertical-scroll-proportion="0.5563481">
-          <folding />
-        </state>
+        <state line="26" column="4" selection-start="405" selection-end="405" vertical-scroll-proportion="0.5563481" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.2-p0/gems/progress_bar-0.4.0/lib/progress_bar.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/generator/monitor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="29" selection-start="21" selection-end="44" vertical-scroll-proportion="0.021398002">
-          <folding />
-        </state>
+        <state line="1" column="29" selection-start="21" selection-end="44" vertical-scroll-proportion="0.021398002" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/generator/generator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="-0.13409415">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="-0.13409415" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/processor_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="0" selection-end="474" vertical-scroll-proportion="0.36376604">
-          <folding />
-        </state>
+        <state line="17" column="14" selection-start="0" selection-end="474" vertical-scroll-proportion="0.36376604" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/work_callback.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/cherry_picker_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="71" selection-start="2202" selection-end="2267" vertical-scroll-proportion="0.6205421">
-          <folding />
-        </state>
+        <state line="92" column="71" selection-start="2202" selection-end="2267" vertical-scroll-proportion="0.6205421" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/ingester/cherry_picker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5406562">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5406562" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/process_monitor_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="4" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.828816">
-          <folding />
-        </state>
+        <state line="61" column="4" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.828816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/monitor/monitor_progress_bar.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="215" selection-end="215" vertical-scroll-proportion="0.19258203">
-          <folding />
-        </state>
+        <state line="9" column="36" selection-start="215" selection-end="215" vertical-scroll-proportion="0.19258203" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/processor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="38" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bubble/monitor/process_monitor.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="8" selection-start="851" selection-end="851" vertical-scroll-proportion="0.7077922">
+        <state line="44" column="8" selection-start="851" selection-end="851" vertical-scroll-proportion="1.4285715">
           <folding />
         </state>
       </provider>
